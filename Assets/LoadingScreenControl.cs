@@ -25,7 +25,8 @@ public class LoadingScreenControl : MonoBehaviour
         {
             float progress = operation.progress / 0.9f;
             slider.value = progress;
-            progressText.text = progress * 100+ "%";
+            float Progress= Mathf.Floor(progress * 100);
+            progressText.text = string.Format("Loading...:{0}%", Progress);
              
             yield return null;
         }
